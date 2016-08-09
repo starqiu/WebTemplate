@@ -1,0 +1,11 @@
+Question: {{question.question_id}}<br>
+<p>
+    {{question.question_text}}
+</p>
+
+Choices:<br>
+<ul>
+    {% for choice in question.choice_set.all %}
+        {{choice.id}} : {{choice.choice_text}}
+    {% endfor %}
+</ul>
